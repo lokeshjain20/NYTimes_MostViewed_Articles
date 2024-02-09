@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ArticleContextProvider, { ArticleContext } from "./ArticleContext";
+import ArticleContextProvider from "./ArticleContext";
 
 describe("ArticleContextProvider", () => {
   it("renders its children", () => {

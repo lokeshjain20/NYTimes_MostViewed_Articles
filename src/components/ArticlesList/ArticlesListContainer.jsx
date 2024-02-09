@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import useFetch from "../../hooks/useFetch";
 import classes from "./ArticlesListContainer.module.css";
 import * as constants from "../../constants";
@@ -10,11 +10,15 @@ const ArticlesListContainer = () => {
   const ctx = useContext(ArticleContext);
   const url = constants.NY_TIMES_API_URL;
   const apiKey = process.env.REACT_APP_NYTIMES_API_KEY;
-  const [isLoading, articlesData] = useFetch(url, {
-    ["api-key"]: apiKey,
-  });
+  const paramsObj = useMemo(
+    () => ({
+      ["api-key"]: apiKey,
+    }),
+    [apiKey]
+  );
+  const [isLoading, articlesData] = useFetch(url, paramsObj);
   const articlesList = articlesData?.results;
-  const handleCardClick = (id, index) => {
+  const handleCardClick = (id) => {
     const selectedArticle = utils.getSelectedArticle(articlesList, id);
     ctx.articleClickHandler(selectedArticle);
   };

@@ -23,7 +23,7 @@ const useFetch = (url, params) => {
       }
     };
     fetchApiData();
-  }, []);
+  }, [url, params]);
   return [isLoading, data];
 };
 
