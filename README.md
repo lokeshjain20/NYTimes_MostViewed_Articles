@@ -9,14 +9,14 @@ NYTimes Articles App is a React-based web application for fetching and displayin
 
 Clone the repository:
 
-```bash
+```console
 git clone https://github.com/lokeshjain20/NYTimes_MostViewed_Articles.git
 cd nytimes-articles-app
 ```
 
 Install dependencies:
 
-```bash
+```console
 npm install
 ```
 
@@ -24,7 +24,7 @@ npm install
 
 Start the development server:
 
-```bash
+```console
 npm start
 ```
 
@@ -32,6 +32,7 @@ This will start the application on your local machine. Open [http://localhost:30
 
 ## Scripts
 
+```console
 - `npm run start`: Runs the development server.
 - `npm run build`: Builds the app for production to the `build` folder.
 - `npm run test`: Launches the test runner.
@@ -39,6 +40,7 @@ This will start the application on your local machine. Open [http://localhost:30
 - `npm run lint`: Runs ES lint check for the project.
 - `npm run lint-fix`: Fix ES lint issue which can be fixed automatically.
 - `npm run eject`: Removes the single build dependency from your project.
+```
 
 ## Features
 
@@ -105,6 +107,7 @@ The NYTIMES ARTICLES app handles following ways to handle different errors:
 
 ## Architecture Design Diagram
 
+```console
        +-------------------+
        |      App.js       |
        +-------------------+
@@ -127,6 +130,7 @@ The NYTIMES ARTICLES app handles following ways to handle different errors:
 +-----------+ |
 | ErrorBoundary| |
 +-----------+ |
+```
 
 - App.js: The main component rendering the entire application.
 - ArticlesListContainer: Container component responsible for fetching most viewed articles and passing them to presentation components.
