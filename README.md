@@ -12,16 +12,19 @@ Clone the repository:
 git clone https://github.com/your-username/nytimes-articles-app.git
 cd nytimes-articles-app
 Install dependencies:
+```
 
-bash
-Copy code
+```bash
 npm install
+```
+
 Usage
 Start the development server:
 
-bash
-Copy code
+```bash
 npm start
+```
+
 This will start the application on your local machine. Open http://localhost:3000 to view it in the browser.
 
 Scripts
@@ -39,4 +42,7 @@ react-dom: ^18.2.0
 react-scripts: 5.0.1
 sonarqube-scanner: ^3.3.0
 web-vitals: ^2.1.4
+
+```
+
 ```
