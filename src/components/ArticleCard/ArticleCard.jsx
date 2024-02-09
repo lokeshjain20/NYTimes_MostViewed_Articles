@@ -1,12 +1,27 @@
+import { useContext } from "react";
 import ImageComponent from "../ImageComponent/ImageComponent";
 import classes from "./ArticleCard.module.css";
+import { ArticleContext } from "../../store/ArticleContext";
 
-const ArticleCard = ({ id, title, imgUrl, author, date, cardClickHandler }) => {
+const ArticleCard = ({
+  id,
+  title,
+  imgUrl,
+  author,
+  date,
+  index,
+  cardClickHandler,
+}) => {
+  const ctx = useContext(ArticleContext);
+  const classNames =
+    ctx.selectedArticleObj?.id === id
+      ? `${classes.card__selected} ${classes.card}`
+      : classes.card;
   return (
     <div
-      className={classes.card}
+      className={classNames}
       data-testid="article-card"
-      onClick={() => cardClickHandler(id)}
+      onClick={() => cardClickHandler(id, index)}
     >
       <div className={classes.header}>
         <ImageComponent url={imgUrl} width={75} height={75} />

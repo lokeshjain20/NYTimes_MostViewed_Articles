@@ -14,30 +14,33 @@ const ArticlesListContainer = () => {
     ["api-key"]: apiKey,
   });
   const articlesList = articlesData?.results;
-  const handleCardClick = (id) => {
+  const handleCardClick = (id, index) => {
     const selectedArticle = utils.getSelectedArticle(articlesList, id);
     ctx.articleClickHandler(selectedArticle);
   };
   return (
     <>
       {!isLoading && articlesList && articlesList.length > 0 ? (
-        <div className={classes.container}>
-          {articlesList.map((articleObj) => {
+        <ul className={classes.container}>
+          {articlesList.map((articleObj, index) => {
             const { id, title, published_date, byline, media } = articleObj;
             const imgUrl = utils.getImageThumbUrl(media);
             return (
-              <ArticleCard
-                title={title}
-                date={published_date}
-                author={byline}
-                imgUrl={imgUrl}
-                id={id}
-                key={id}
-                cardClickHandler={handleCardClick}
-              />
+              <li>
+                <ArticleCard
+                  title={title}
+                  date={published_date}
+                  author={byline}
+                  imgUrl={imgUrl}
+                  id={id}
+                  key={id}
+                  cardClickHandler={handleCardClick}
+                  index={index}
+                />
+              </li>
             );
           })}
-        </div>
+        </ul>
       ) : (
         <div className={classes.loading}>Loading....</div>
       )}
