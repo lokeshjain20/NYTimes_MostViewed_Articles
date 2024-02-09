@@ -9,7 +9,7 @@ NYTimes Articles App is a React-based web application for fetching and displayin
 
 Clone the repository:
 
-```bash
+```console
 git clone https://github.com/lokeshjain20/NYTimes_MostViewed_Articles.git
 cd nytimes-articles-app
 ```
