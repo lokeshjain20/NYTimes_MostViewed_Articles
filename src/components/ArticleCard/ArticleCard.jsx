@@ -2,6 +2,7 @@ import { useContext } from "react";
 import ImageComponent from "../ImageComponent/ImageComponent";
 import classes from "./ArticleCard.module.css";
 import { ArticleContext } from "../../store/ArticleContext";
+import PropTypes from "prop-types";
 
 const ArticleCard = ({
   id,
@@ -34,6 +35,16 @@ const ArticleCard = ({
       </div>
     </div>
   );
+};
+
+ArticleCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+  cardClickHandler: PropTypes.func.isRequired,
 };
 
 export default ArticleCard;

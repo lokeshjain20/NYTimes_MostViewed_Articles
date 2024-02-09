@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import * as utils from "../utils";
+import PropTypes from "prop-types";
 
 export const ArticleContext = React.createContext({
   selectedArticleObj: null,
   articleImgUrl: "",
-  articleClickHandler: (url) => {},
+  articleClickHandler: () => {},
 });
 
-const ArticleContextProvider = (props) => {
+const ArticleContextProvider = ({ children }) => {
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [url, setUrl] = useState("");
   function articleClickHandler(obj) {
@@ -23,9 +24,13 @@ const ArticleContextProvider = (props) => {
   };
   return (
     <ArticleContext.Provider value={contextValue}>
-      {props.children}
+      {children}
     </ArticleContext.Provider>
   );
+};
+
+ArticleContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default ArticleContextProvider;
