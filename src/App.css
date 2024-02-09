@@ -14,3 +14,9 @@
   padding: 15px;
   max-height: 500px;
 }
+@media screen and (max-width: 750px) {
+  .mainContainer {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+}
