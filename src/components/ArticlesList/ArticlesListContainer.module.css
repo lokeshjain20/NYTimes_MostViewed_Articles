@@ -1,0 +1,28 @@
+.container {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgb(69, 65, 65);
+  gap: 15px;
+  overflow-y: scroll;
+  max-height: 480px;
+}
+.container::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the background color of the scrollbar track */
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: rgb(185, 180, 180); /* Set the color of the scrollbar handle */
+}
+.loading {
+  display: flex;
+  font-weight: bold;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}

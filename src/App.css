@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  max-height: 500px;
+}

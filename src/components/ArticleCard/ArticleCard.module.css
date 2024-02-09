@@ -1,0 +1,47 @@
+.card {
+  width: 95%;
+  height: auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: darkblue;
+}
+
+.description {
+  color: black;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.info span {
+  font-size: 10px;
+  color: rgb(190, 184, 184);
+}
