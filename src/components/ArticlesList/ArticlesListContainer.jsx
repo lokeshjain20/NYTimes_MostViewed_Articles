@@ -26,14 +26,13 @@ const ArticlesListContainer = () => {
             const { id, title, published_date, byline, media } = articleObj;
             const imgUrl = utils.getImageThumbUrl(media);
             return (
-              <li>
+              <li key={id}>
                 <ArticleCard
                   title={title}
                   date={published_date}
                   author={byline}
                   imgUrl={imgUrl}
                   id={id}
-                  key={id}
                   cardClickHandler={handleCardClick}
                   index={index}
                 />

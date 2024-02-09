@@ -9,6 +9,7 @@ describe("ArticleCard", () => {
     imgUrl: "test.jpg",
     author: "Test Author",
     date: "2022-01-01",
+    index: 1,
     cardClickHandler: jest.fn(),
   };
 
@@ -22,6 +23,6 @@ describe("ArticleCard", () => {
   it("calls cardClickHandler when card is clicked", () => {
     const { getByTestId } = render(<ArticleCard {...mockProps} />);
     fireEvent.click(getByTestId("article-card"));
-    expect(mockProps.cardClickHandler).toHaveBeenCalledWith("1");
+    expect(mockProps.cardClickHandler).toHaveBeenCalledWith("1", 1);
   });
 });

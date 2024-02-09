@@ -20,6 +20,13 @@ const mockedArticles = {
       byline: "Test Author",
       media: [{ "media-metadata": [{ url: "test.jpg" }] }],
     },
+    {
+      id: "2",
+      title: "Test Article 2",
+      published_date: "2022-01-02",
+      byline: "Test Author2",
+      media: [{ "media-metadata": [{ url: "test2.jpg" }] }],
+    },
   ],
 };
 
@@ -35,6 +42,22 @@ describe("ArticlesListContainer", () => {
     const { getByText } = render(<ArticlesListContainer />);
     await waitFor(() => {
       expect(getByText("Test Article 1")).toBeInTheDocument();
+    });
+  });
+
+  it("renders <li> tag for each article when articles list is available", async () => {
+    mockedUseFetch.mockReturnValue([false, mockedArticles]);
+    const articleClickHandlerMock = jest.fn();
+    const ctxValue = { articleClickHandler: articleClickHandlerMock };
+
+    const { getAllByRole } = render(
+      <ArticleContext.Provider value={ctxValue}>
+        <ArticlesListContainer />
+      </ArticleContext.Provider>
+    );
+    await waitFor(() => {
+      const listItems = getAllByRole("listitem");
+      expect(listItems).toHaveLength(2);
     });
   });
 
