@@ -10,17 +10,14 @@ const useFetch = (url, params) => {
         const response = await axios.get(url, {
           params,
         });
-        console.log("response is", response);
         const dataArr = response.data;
         setIsLoading(false);
         setData(dataArr);
       } catch (error) {
         setIsLoading(false);
         if (axios.isAxiosError(error)) {
-          console.error("Axios Error:", error.message);
           throw new Error(error);
         } else {
-          console.error("Network Error:", error);
           throw new Error(error);
         }
       }

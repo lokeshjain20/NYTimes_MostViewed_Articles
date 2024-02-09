@@ -6,7 +6,6 @@ import { ArticleContext } from "../../store/ArticleContext";
 const ArticleDetails = () => {
   const ctx = useContext(ArticleContext);
   const articleObj = ctx.selectedArticleObj || null;
-  console.log("articles obj is", articleObj, ctx);
   const detailsView = articleObj ? (
     <div className={classes.detailsContainer}>
       <ImageComponent url={ctx.articleImgUrl} width={440} height={293} />

@@ -5,7 +5,6 @@ const ErrorBoundary = ({ children }) => {
 
   useEffect(() => {
     const errorHandler = (error, errorInfo) => {
-      console.error("Error caught by error boundary:", error, errorInfo);
       setHasError(true);
     };
 
