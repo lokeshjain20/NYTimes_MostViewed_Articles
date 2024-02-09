@@ -17,7 +17,7 @@ const ErrorBoundary = ({ children }) => {
   }, []);
 
   if (hasError) {
-    return <div>Something went wrong.</div>;
+    return <div>Something went wrong. Please try again later.</div>;
   }
 
   return children;
