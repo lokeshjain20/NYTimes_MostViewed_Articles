@@ -32,13 +32,13 @@ This will start the application on your local machine. Open [http://localhost:30
 ## Scripts
 
 ```bash
-- `npm run start`: Runs the development server.
-- `npm run build`: Builds the app for production to the `build` folder.
-- `npm run test`: Launches the test runner.
-- `npm run coverage`: Runs Test coverage for entire application.
-- `npm run lint`: Runs ES lint check for the project.
-- `npm run lint-fix`: Fix ES lint issue which can be fixed automatically.
-- `npm run eject`: Removes the single build dependency from your project.
+ `npm run start`: Runs the development server.
+ `npm run build`: Builds the app for production to the `build` folder.
+ `npm run test`: Launches the test runner.
+ `npm run coverage`: Runs Test coverage for entire application.
+ `npm run lint`: Runs ES lint check for the project.
+ `npm run lint-fix`: Fix ES lint issue which can be fixed automatically.
+ `npm run eject`: Removes the single build dependency from your project.
 ```
 
 ## Features
