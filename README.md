@@ -19,6 +19,10 @@ Install dependencies:
 npm install
 ```
 
+## Branches
+
+This project has only one branch i.e. 'main'
+
 ## Usage
 
 Start the development server:
