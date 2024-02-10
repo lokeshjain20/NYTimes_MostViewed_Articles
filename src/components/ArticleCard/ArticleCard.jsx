@@ -38,7 +38,7 @@ const ArticleCard = ({
 };
 
 ArticleCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   title: PropTypes.string.isRequired,
   imgUrl: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
